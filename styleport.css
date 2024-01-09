@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.Portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    background-color: black;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.navlist li{
+    list-style: none;
+}
+
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+}
+.left-container,.right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+    background: darkslategrey;
+    width: 70%;
+    padding-left: 3rem;
+
+}
+
+.right-container{
+    background:gainsboro;
+    width: 30%;
+
+}
+
+.icons.fa-brands{
+    color: white;
+    font-size: 2rem;
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.content{
+    margin-left: 4rem;
+}
+
+.content h2{
+    font-size: 1.5rem;
+    color: black;
+}
+.content h1{
+    font-size:4rem;
+    color: white;
+}
+
+.content p{
+    font-size: 1.1rem;
+    color: black;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0 ;
+    line-height: 1.8rem;
+}
+
+.btn button{
+    border: .1rem solid lightblue;
+    font-size: 1.1rem;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button:nth-child(1){
+    background: lightblue;
+}
+button:nth-child(2){
+    background:transparent;
+    color: lightblue;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background:transparent;
+    color: lightblue;
+}
+
+button:nth-child(2):hover{
+    background:lightblue;
+    color:black;
+}
+
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(white,darkblue );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50% ,-50%);
+
+}
+.circle:nth-child(1){
+    background:linear-gradient(90deg,transparent 50%,gainsboro 50% );
+    width: 30.5rem;
+
+}
+.circle:nth-child(2){
+    background-image: url("image.jpeg") ;
+    width: 30rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border:.1rem solid white ;
+    box-shadow: 0 0 1rem white inset 0 0 1rem white 0 0 2rem lightgray inset 0 0 2rem lightgray 0 0 4rem lightgray 0 0 4rem lightgray ;
+
+}
+
+.navlist li a::after , .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition:transform .5s;
+}
+.navlist li a:hover::after , .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
